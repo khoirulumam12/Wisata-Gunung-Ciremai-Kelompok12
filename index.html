@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wisata Gunung Ciremai</title>
+  <meta name="description" content="Wisata Gunung Ciremai - Panduan lengkap mendaki gunung tertinggi di Jawa Barat dengan peralatan modern dan pemandu profesional.">
+
+  <!-- Meta tag Open Graph untuk sosial media -->
+  <meta property="og:title" content="Wisata Gunung Ciremai" />
+  <meta property="og:description" content="Panduan lengkap mendaki gunung tertinggi di Jawa Barat dengan peralatan modern dan pemandu profesional." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gunungceria.com" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e0f7e9;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #08ec49;
+      color: #140202;
+      padding: 15px 5vw;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    nav {
+      background-color: #2E5984;
+      padding: 10px 5vw;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #4CAF50;
+    }
+
+    main {
+      max-width: 1000px;
+      width: 95vw;
+      margin: 30px auto;
+      padding: 40px 5vw;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      margin-bottom: 15px;
+      color: #2E5984;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 15px;
+    }
+
+    /* Efek transisi tombol */
+    .cta-button {
+      background-color: #2E5984;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 1.1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #4CAF50;
+      transform: scale(1.05);
+    }
+
+    .features {
+      display: flex;
+      gap: 25px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .feature-item {
+      background-color: #E3F2FD;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 280px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #1A237E;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .peralatan-list {
+      margin-bottom: 40px;
+    }
+
+    .peralatan-list h2 {
+      color: #2E5984;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .peralatan-list ul {
+      list-style: disc inside;
+      max-width: 500px;
+      margin: 0 auto;
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .gunung-card {
+      display: flex;
+      gap: 30px;
+      background-color: #E8F0FE;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Efek zoom lembut pada gambar gunung */
+    .gunung-card img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gunung-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .gunung-info {
+      max-width: 600px;
+      color: #2E5984;
+      font-size: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: justify;
+    }
+
+    .gunung-info h2 {
+      margin-bottom: 15px;
+    }
+
+    /* GALERI FOTO */
+    .gallery {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FORM KONTAK */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background-color: #E3F2FD;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #2E5984;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1A237E;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .contact-form button {
+      background-color: #2E5984;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #4CAF50;
+      transform: scale(1.05);
+    }
+
+    /* TESTIMONI */
+    .testimonials {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background-color: #E8F0FE;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      color: #2E5984;
+      margin-bottom: 25px;
+    }
+
+    .testimonial-item {
+      background-color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #444;
+      position: relative;
+    }
+
+    .testimonial-item::before {
+      content: "“";
+      font-size: 3rem;
+      color: #4CAF50;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+
+    .testimonial-author {
+      margin-top: 10px;
+      text-align: right;
+      font-weight: 700;
+      color: #2E5984;
+      font-style: normal;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #4682B4;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .features {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .gunung-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .gunung-info {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      main {
+        padding: 30px 4vw;
+      }
+
+      .testimonial-item::before {
+        left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wisata Gunung Ciremai</h1>
+    <p>Tempat terbaik untuk petualangan mendaki gunung dengan perlengkapan lengkap dan panduan terpercaya.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#features">Fitur</a></li>
+      <li><a href="#peralatan">Peralatan</a></li>
+      <li><a href="#gunung">Gunung</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#testimonials">Testimoni</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <h2>Selamat Datang di Puncak Gunung Ciremai</h2>
+      <p>Rasakan pengalaman mendaki gunung dengan perlengkapan yang lengkap dan layanan terbaik dari kami. Nikmati keindahan alam tanpa khawatir soal perlengkapan dan keamanan.</p>
+      <p>Gunung Ciremai adalah gunung tertinggi di Jawa Barat dengan ketinggian sekitar 3.078 meter di atas permukaan laut (mdpl). Terletak di perbatasan antara Kabupaten Kuningan dan Majalengka, gunung ini termasuk dalam Taman Nasional Gunung Ciremai (TNGC).</p>
+      <a href="mailto:info@gunungceria.com" class="cta-button">Hubungi Sekarang</a>
+    </section>
+
+    <section id="features" class="features" aria-label="Fitur">
+      <div class="feature-item">Peralatan Lengkap & Modern</div>
+      <div class="feature-item">Panduan Profesional</div>
+      <div class="feature-item">Harga Terjangkau</div>
+      <div class="feature-item">Jalur Mendaki Aman</div>
+    </section>
+
+    <section id="peralatan" class="peralatan-list">
+      <h2>Daftar Peralatan Mendaki</h2>
+      <ul>
+        <li>Tenda</li>
+        <li>Sleeping Bag</li>
+        <li>Carrier/Backpack</li>
+        <li>Matras</li>
+        <li>Kompor Portable</li>
+        <li>Peralatan Masak</li>
+        <li>Pakaian Hangat</li>
+        <li>Sepatu Gunung</li>
+      </ul>
+    </section>
+
+    <section id="gunung" class="gunung-card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Gunung Ciremai" loading="lazy" />
+      <div class="gunung-info">
+        <h2>Gunung Ciremai</h2>
+        <p>Ciremai terkenal dengan jalur pendakiannya yang menantang, pemandangan alam yang indah, serta keanekaragaman flora dan fauna. Gunung ini juga memiliki nilai sejarah dan spiritual karena banyak ditemukan situs-situs bersejarah di sekitarnya.</p>
+      </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section id="gallery">
+      <h2 style="text-align:center; color:#2E5984; margin-bottom: 25px;">Galeri Foto Gunung Ciremai</h2>
+      <div class="gallery">
+        <img src="images\gunung ciremai2.jpeg" alt="Pemandangan Gunung 1" loading="lazy" />
+        <img src="images\Gunung-Ciremai3.jpg" alt="Pemandangan Gunung 2" loading="lazy" />
+        <img src="images\Pendaki-berfoto-di-puncak-Gunung-Ciremai-Rabu-27122023.jpg" alt="Jalur Pendakian" loading="lazy" />
+        <img src="images\gunung-ciremai-1_169.jpeg" alt="Tenda di Gunung" loading="lazy" />
+        <img src="images\5d56d4145e04b.jpg" alt="Tenda di Gunung" loading="lazy" />
+        <img src="images\ciremai.jpg" alt="Tenda di Gunung" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimonials" class="testimonials">
+      <h2>Testimoni Pengunjung</h2>
+      <div class="testimonial-item">
+        <p>Mendaki Gunung Ciremai bersama tim ini sangat menyenangkan dan aman. Peralatan lengkap dan panduan profesional membuat pengalaman kami tak terlupakan.</p>
+        <div class="testimonial-author">- Rina Sari</div>
+      </div>
+      <div class="testimonial-item">
+        <p>Harga yang terjangkau tapi layanan sangat memuaskan. Pemandangan indah dan jalur pendakian yang jelas membuat saya ingin kembali lagi.</p>
+        <div class="testimonial-author">- Agus Santoso</div>
+      </div>
+    </section>
+
+    <!-- FORM KONTAK -->
+    <section id="kontak" class="contact-form" aria-label="Form Kontak">
+      <h2>Hubungi Kami</h2>
+      <form action="mailto:info@gunungceria.com" method="POST" enctype="text/plain">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Kontak kami: <a href="mailto:info@gunungceria.com">info@gunungceria.com</a> | Telp: 083823051394(Ahmad Afgani), 089630699164(KHOIRUL UMAM), 0895374084774(Rio Adriana)</a></p>
+  </footer>
+
+</body>
+</html>
